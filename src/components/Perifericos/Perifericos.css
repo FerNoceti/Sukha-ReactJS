@@ -1,0 +1,26 @@
+.perifericos{
+    color: #0741ACff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perifericos__titulo{
+    
+    font-size: 6rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 20px
+}
+
+.perifericos__p{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px
+}
+
+.perifericos img{
+    width: 40%;
+}

@@ -1,0 +1,33 @@
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2657B4ff;
+    font-size: 25px;
+    padding: 2px 16px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.cart__icon{
+    font-size: 35px;
+}
+
+.cart__number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -10px;
+    left: -5px;
+    padding: 5px;
+    height: 30px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.cart:active{
+    color: #0741ACff;
+}

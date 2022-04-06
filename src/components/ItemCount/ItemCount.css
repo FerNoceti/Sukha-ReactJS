@@ -1,0 +1,44 @@
+.itemcount{
+    background-color: #fff;
+    width: 200px;
+    background: none;
+}
+
+.itemcount__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 10px 30px;
+}
+
+.itemcount__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #2657B4ff;
+    background: none;
+}
+
+.itemcount__buttonAdd{
+    border: none;
+    background: none;
+    font-weight: 750;
+    font-size: 17px;
+    padding: 3px 10px;
+}
+
+.itemcount__cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-size: 20px;
+    font-weight: 800;
+    width: 80px;
+}

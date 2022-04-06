@@ -1,0 +1,16 @@
+.user{
+    display: flex;
+    color: #0741ACff;
+}
+
+.user__icon{
+    font-size: 35px;
+}
+
+.user__text{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}

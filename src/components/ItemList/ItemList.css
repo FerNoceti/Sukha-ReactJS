@@ -1,0 +1,13 @@
+.itemlist{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.itemlist li{
+    list-style: none;
+}

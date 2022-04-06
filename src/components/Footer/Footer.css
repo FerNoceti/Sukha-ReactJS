@@ -1,0 +1,45 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #2657B4ff;
+    color: #eee;
+    height: fit-content;
+    min-height: 100px;
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    gap: 5px;
+}
+
+.footer__title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footer__redes{
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.footer__p{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.footer__a{
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+.footer__github{
+    font-size: 30px;
+}

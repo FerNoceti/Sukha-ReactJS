@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background: #eee;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    height: 80px;
+}
+
+.navbar__img{
+    width: 150px;
+    margin-left: 10px;
+}
+
+.navbar__categorias{
+    display: flex;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.navbar__categoria{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 1.25rem;
+    color: #0741ACff;
+}
+
+.navbar__categoria a:active{
+    color: rgb(13, 42, 97);
+}
+
+.navbar__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}

@@ -1,0 +1,19 @@
+.itemListContainer{
+    padding: 20px 10px;
+    background-color: #dfe3ee;
+}
+
+.itemListContainer__titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 1000;
+    padding-bottom: 30px;
+}
+
+.itemListContainer__subtitulo{
+    display: flex;
+    justify-content: left;
+    font-size: 1.5rem;
+    margin: 15px 0 0 15px;
+}
