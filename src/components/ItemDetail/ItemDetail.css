@@ -15,7 +15,8 @@
 }
 
 .itemDetail__container img {
-    width: 100%;
+    width: 80%;
+    max-height: 700px;
 }
 
 .itemDetail__nombre{
