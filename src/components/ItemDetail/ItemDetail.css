@@ -11,11 +11,11 @@
     padding: 30px;
     align-items: center;
     gap: 30px;
+    justify-content: center;
 }
 
 .itemDetail__container img {
-    height: 700px;
-    width: 400px;
+    width: 100%;
 }
 
 .itemDetail__nombre{
