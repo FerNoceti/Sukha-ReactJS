@@ -8,10 +8,10 @@ function ItemCount({ initial = 0, stock, onAdd}) {
 
     const [count, setCount] = useState(initial)
 
-    const increment = () => {count < stock ? setCount(count + 1) : notificar("No hay stock del producto")}
-    const decrement = () => { count > 0 ? setCount(count - 1) : notificar("No puedes ingresar cantidades menores a 0")}
+    const increment = () => {count < stock ? setCount(count + 1) : notificar("No hay stock del producto", 'warning')}
+    const decrement = () => { count > 0 ? setCount(count - 1) : notificar("No puedes ingresar cantidades menores a 0", 'warning')}
     
-    function notificar(texto){
+    function notificar(texto, tipo){
         toast(texto, {
             position: "bottom-right",
             autoClose: 2500,
@@ -20,7 +20,7 @@ function ItemCount({ initial = 0, stock, onAdd}) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            type: 'warning',
+            type: tipo,
             theme: "dark"
             })
     }
@@ -33,7 +33,7 @@ function ItemCount({ initial = 0, stock, onAdd}) {
             <button onClick={increment} className='itemcount__button'>+</button>
         </div>
         <div className='itemcount__container'>
-            <button onClick={onAdd} className="itemcount__buttonAdd" disabled={count === 0}>Agregar al carrito</button>
+            <button onClick={() => {notificar("Agregado", "succes"); setCount(0)}} className="itemcount__buttonAdd" disabled={count === 0}>Agregar al carrito</button>
             <ToastContainer position="bottom-right"/>
         </div>
     </div>

@@ -7,7 +7,9 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 function ItemDetailContainer() {
 
     const params = useParams()
-    const [product, setProduct] = useState()
+    const [product, setProduct] = useState(
+        {title:'', price:'', pictures:[{url:''}] }
+    )
     
     const request = 'https://api.mercadolibre.com/items/' + params.id
 

@@ -8,8 +8,8 @@ function Item(props) {
         <span className='item__title'>{props.title}</span>
         <img className='item__image' src={props.img} alt="img item"/>
         <span className='item__precio'>Precio: ${props.price}</span>
-        <span className='item__stock'>Stock: {props.stock}</span>
-        <Link to={`/product/${props.id}`}>Ver Detalles</Link>
+        <span className='item__stock'>Stock: {20}</span>
+        <Link to={`/product/${props.id}`} className='item__link'>Ver Detalles</Link>
 
     </div>
   )

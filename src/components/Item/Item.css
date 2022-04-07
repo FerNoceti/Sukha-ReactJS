@@ -9,6 +9,7 @@
     color: #2657B4ff;
     border-radius: 10px;
     margin: 10px;
+    gap: 20px;
 }
 
 .item__title{
@@ -32,4 +33,14 @@
     width: 100%;
     font-size: 1.2rem;
     font-weight: 800;
+}
+
+.item__link{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #2657B4ff;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 10px;
+    border-radius: 10px;
 }

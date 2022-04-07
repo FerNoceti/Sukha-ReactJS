@@ -12,11 +12,11 @@
     align-items: center;
     gap: 30px;
     justify-content: center;
+    height: 75vh;
 }
 
 .itemDetail__container img {
     width: 80%;
-    max-height: 700px;
 }
 
 .itemDetail__nombre{
