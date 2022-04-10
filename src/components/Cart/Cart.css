@@ -1,0 +1,8 @@
+.cart{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    color: #2657B4ff;
+    font-weight: 700;
+    height: 90vh;
+}

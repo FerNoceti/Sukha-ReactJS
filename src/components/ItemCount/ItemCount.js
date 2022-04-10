@@ -25,6 +25,7 @@ function ItemCount({ initial = 0, stock, onAdd}) {
             })
     }
 
+
     return (
     <div className='itemcount'>
         <div className='itemcount__container'>
@@ -33,7 +34,7 @@ function ItemCount({ initial = 0, stock, onAdd}) {
             <button onClick={increment} className='itemcount__button'>+</button>
         </div>
         <div className='itemcount__container'>
-            <button onClick={() => {notificar("Agregado", "succes"); setCount(0)}} className="itemcount__buttonAdd" disabled={count === 0}>Agregar al carrito</button>
+            <button onClick={() => {onAdd(count);  setCount(0);}} className="itemcount__buttonAdd" disabled={count === 0}>Agregar al carrito</button>
             <ToastContainer position="bottom-right"/>
         </div>
     </div>
