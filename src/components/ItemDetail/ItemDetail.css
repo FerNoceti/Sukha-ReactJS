@@ -15,8 +15,9 @@
     height: 75vh;
 }
 
-.itemDetail__container img {
-    width: 80%;
+.itemDetail__img {
+    width: auto;
+    max-height: 100%;
 }
 
 .itemDetail__nombre{
@@ -33,9 +34,20 @@
     font-weight: 900;
 }
 
-.itemDetail__descripcion{
+.itemDetail__descripcion, .itemDetail__stock{
     width: 100%;
     text-align: left;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.itemdetail__button{
+    color: #eee;
+    border: none;
+    background-color: #2657B4ff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
 }
