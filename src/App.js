@@ -9,11 +9,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Consolas from './Consolas/Consolas'
 import Perifericos from './components/Perifericos/Perifericos'
 import Cart from './components/Cart/Cart'
-import CartContext from './components/CartContext/CartContext'
+import {CartContextProvider} from './components/CartContext/CartContext'
+
+
 
 function App() {
+
   return (
     <div className="App">
+        <CartContextProvider>
         <BrowserRouter>
             <Navbar/>
             <Routes>
@@ -25,6 +29,7 @@ function App() {
                 <Route exact path='/cart' element={<Cart/>}></Route>
             </Routes>
         </BrowserRouter>
+        </CartContextProvider>
         <Footer/>
     </div>
   );
