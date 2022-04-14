@@ -1,17 +1,21 @@
 import React from "react";
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import {useState} from "react"
+import {useState, useContext} from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
+import CartContext from "../CartContext/CartContext"
 
-
-function ItemDetail({title, price, image}){
+function ItemDetail({id, title, price, image}){
+    
     const stock = parseInt(Math.random() * 100 + 1)
     const [show, setShow] = useState(false)
 
+    const {addItem} = useContext(CartContext)
+
     const onAdd = (cant) => {
         show ? setShow(false) : setShow(true)
+        addItem({id, title, price}, cant)
         toast(`se añadio al carrito: ${cant} unidad/es de: ${title}`, {
             position: "top-center",
             autoClose: 2500,
@@ -23,12 +27,14 @@ function ItemDetail({title, price, image}){
             type: 'succes',
             theme: "light"
             })
+        
     }
+
 
     return(
         <div className="itemDetail">
             <div className="itemDetail__container">
-                <img className="itemDetail__img" src={image}></img>
+                <img className="itemDetail__img" src={image} alt={`Imagen de ${title}`}></img>
             </div>
             <div className="itemDetail__container">
                 <span className="itemDetail__nombre">{title}</span>
