@@ -6,7 +6,7 @@ import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import Consolas from './Consolas/Consolas'
+import Consolas from './components/Consolas/Consolas'
 import Perifericos from './components/Perifericos/Perifericos'
 import Cart from './components/Cart/Cart'
 
