@@ -27,6 +27,7 @@ function ItemDetailContainer() {
             <ItemDetail id={product.id} title={product.title} price={product.price} image={product.pictures[0].url}/>
         </div>
     )
-  }
+
+}
 
 export default ItemDetailContainer

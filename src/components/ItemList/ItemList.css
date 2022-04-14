@@ -1,7 +1,7 @@
 .itemlist{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 10px 0;
     justify-content: space-around;
     align-items: center;
     padding: 20px 0;

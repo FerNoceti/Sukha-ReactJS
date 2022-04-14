@@ -6,8 +6,7 @@
     align-items: center;
 }
 
-.consolas__titulo{
-    
+.consolas__titulo{    
     font-size: 6rem;
     font-weight: 1000;
     text-align: center;
@@ -22,5 +21,5 @@
 }
 
 .consolas img{
-    width: 60%;
+    width: 30%;
 }
