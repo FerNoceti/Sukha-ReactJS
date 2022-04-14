@@ -1,0 +1,25 @@
+.notebook{
+    color: #0741ACff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notebook__titulo{    
+    font-size: 6rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 20px
+}
+
+.notebook__p{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px
+}
+
+.notebook img{
+    width: 50%;
+}

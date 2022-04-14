@@ -25,6 +25,10 @@
     background: none;
 }
 
+.itemcount__button:hover, .itemcount__buttonAdd:hover{
+    cursor: pointer;
+}
+
 .itemcount__buttonAdd{
     border: none;
     background: none;

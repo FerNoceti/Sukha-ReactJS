@@ -30,6 +30,10 @@
     color: #0741ACff;
 }
 
+.navbar__categoria:hover{
+    color: #2657B4ff;
+}
+
 .navbar__categoria a:active{
     color: rgb(13, 42, 97);
 }
