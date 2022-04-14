@@ -9,6 +9,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Consolas from './Consolas/Consolas'
 import Perifericos from './components/Perifericos/Perifericos'
 import Cart from './components/Cart/Cart'
+import CartContext from './components/CartContext/CartContext'
 
 function App() {
   return (
