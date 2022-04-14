@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import './Consolas.css'
 
 function Consolas() {
