@@ -4,9 +4,8 @@ import ItemList from '../ItemList/ItemList';
 
 function ItemListContainer({title, buscar}) {
 
-    
     const [products, setProducts] = useState([])
-    
+
     useEffect(() => {
         fetch('https://api.mercadolibre.com/sites/MLA/search?q=' + buscar)
             .then(res => {

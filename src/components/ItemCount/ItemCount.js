@@ -10,7 +10,7 @@ function ItemCount({ initial = 0, stock, onAdd}) {
 
     const increment = () => {count < stock ? setCount(count + 1) : notificar("No hay stock del producto", 'warning')}
     const decrement = () => { count > 0 ? setCount(count - 1) : notificar("No puedes ingresar cantidades menores a 0", 'warning')}
-    
+
     function notificar(texto, tipo){
         toast(texto, {
             position: "bottom-right",

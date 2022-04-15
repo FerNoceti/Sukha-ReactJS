@@ -10,7 +10,7 @@ function ItemDetailContainer() {
     const [product, setProduct] = useState(
         {title:'', price:'', pictures:[{url:''}] }
     )
-    
+
     const request = 'https://api.mercadolibre.com/items/' + params.id
 
     useEffect(() => {

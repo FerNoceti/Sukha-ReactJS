@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import CartContext from "../CartContext/CartContext"
 
 function ItemDetail({id, title, price, image}){
-    
+
     const stock = parseInt(Math.random() * 100 + 1)
     const [show, setShow] = useState(false)
 
@@ -27,7 +27,7 @@ function ItemDetail({id, title, price, image}){
             type: 'succes',
             theme: "light"
             })
-        
+
     }
 
 
