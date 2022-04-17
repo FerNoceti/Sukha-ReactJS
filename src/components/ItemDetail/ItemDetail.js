@@ -15,7 +15,7 @@ function ItemDetail({id, title, price, image}){
 
     const onAdd = (cant) => {
         show ? setShow(false) : setShow(true)
-        addItem({id, title, price}, cant)
+        addItem({id, title, price, image}, cant)
         toast(`se añadio al carrito: ${cant} unidad/es de: ${title}`, {
             position: "top-center",
             autoClose: 2500,
@@ -42,7 +42,7 @@ function ItemDetail({id, title, price, image}){
                 <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/>{"Sin descricpcion"}</span>
                 <span className="itemDetail__stock">Stock: {stock}</span>
                 <div hidden={show} className="itemDetail__count"><ItemCount stock={stock} onAdd={onAdd}/></div>
-                <Link hidden={!show} className="itemdetail__button" to={"/cart"}>Terminar mi compra</Link>            
+                <Link hidden={!show} className="itemdetail__button" to={"/cart"}>Terminar mi compra</Link>
             </div>
             <ToastContainer position="top-right"/>
         </div>
