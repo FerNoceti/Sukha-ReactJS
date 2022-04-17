@@ -17,3 +17,12 @@
     font-size: 1.5rem;
     margin: 15px 0 0 15px;
 }
+
+.cargando{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    height: 300px;
+}
