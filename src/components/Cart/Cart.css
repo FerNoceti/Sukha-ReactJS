@@ -1,15 +1,18 @@
 .cart{
     display: flex;
-    justify-content: center;
     min-height: 90vh;
     flex-direction: column;
     padding: 20px;
+    align-items: center;
 }
 
 .cart__title{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #2657B4ff;
+    display: flex;
+    justify-content: center;
 }
 
 .cart__list{
@@ -31,7 +34,8 @@
     font-size: 2rem;
     font-weight: bold;
     border-radius: 10px;
-    padding: 10px;
+    padding: 13px;
+    width: 200px;
 }
 
 .cart__empty{

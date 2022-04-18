@@ -15,6 +15,7 @@ function ItemListContainer({title, buscar}) {
                 setProducts(res.results)
             }).then(() => {
                 setLoading(false)
+                window.scrollTo(0, 0)
             })
     },[])
 
