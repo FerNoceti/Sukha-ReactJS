@@ -8,7 +8,7 @@ function Perifericos() {
         <span className='perifericos__titulo'>Periféricos</span>
         <img src='https://i.imgur.com/yl0KpfW.png'/>
         <p className='perifericos__p'>Mejora tu experiencia con Periféricos de gama alta</p>
-        <ItemListContainer title={'Periféricos'} buscar={'perifericos%20gamer'}/>
+        <ItemListContainer title={'Periféricos'} buscar={['perifericos']}/>
     </div>
   )
 }

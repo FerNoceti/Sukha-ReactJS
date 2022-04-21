@@ -11,7 +11,7 @@ function ItemListContainer({title, buscar}) {
     useEffect(() => {
         const db = getFirestore()
 
-        const q = query(collection(db, 'items'), where("categoryId", "==", buscar));
+        const q = query(collection(db, 'items'), where('categoryId', 'in', buscar));
         getDocs(q).then(docs => {
             if (docs.length === 0) {
                 setLoading(false)
