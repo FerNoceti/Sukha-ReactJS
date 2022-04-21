@@ -16,7 +16,7 @@ function ItemDetailContainer() {
 
         const q = query(
             collection(db, 'items'),
-            where(params.id, "==", request),
+            where('id', '==', params.id),
             limit(1)
         );
         getDocs(q).then(docs => {

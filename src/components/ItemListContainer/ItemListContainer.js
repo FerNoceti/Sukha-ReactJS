@@ -14,8 +14,9 @@ function ItemListContainer({title, buscar}) {
         const q = query(collection(db, 'items'), where('categoryId', 'in', buscar));
         getDocs(q).then(docs => {
             if (docs.length === 0) {
-                setLoading(false)
+                setProducts([])
             } else {
+                setLoading(false)
                 setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
             }
         })
