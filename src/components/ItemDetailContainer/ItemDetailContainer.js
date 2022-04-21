@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import {getFirestore, collection, getDocs, query, where, limit} from '../../firebase/firebase'
+import {getFirestore, collection, getDocs, query, where, limit} from 'firebase/firestore'
 
 function ItemDetailContainer() {
 
@@ -25,7 +25,7 @@ function ItemDetailContainer() {
                     {title:'', price:'', pictures:[{url:''}] }
                 )
             } else {
-                setProduct(snapshot.docs[0].data())
+                setProduct(docs[0].data())
             }
         })
     },[])

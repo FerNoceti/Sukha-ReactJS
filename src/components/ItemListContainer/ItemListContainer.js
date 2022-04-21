@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
-import {getFirestore, collection, getDocs, query, where} from '../../firebase/firebase'
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 function ItemListContainer({title, buscar}) {
 
@@ -17,7 +17,7 @@ function ItemListContainer({title, buscar}) {
                 setProducts([])
             } else {
                 setLoading(false)
-                setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+                setProducts(docs.map(doc => ({ id: doc.id, ...doc.data() })))
             }
         })
     }, [])
