@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
-
+import {getFirestore, collection, getDocs, query, where, limit} from '../../firebase/firebase'
 
 function ItemDetailContainer() {
 
@@ -11,15 +11,23 @@ function ItemDetailContainer() {
         {title:'', price:'', pictures:[{url:''}] }
     )
 
-    const request = 'https://api.mercadolibre.com/items/' + params.id
-
     useEffect(() => {
-        fetch(request)
-            .then(res => {
-                return res.json()
-            }).then((res) =>{
-                setProduct(res)
-            })
+        const db = getFirestore()
+
+        const q = query(
+            collection(db, 'items'),
+            where("id", "==", request),
+            limit(1)
+        );
+        getDocs(q).then(docs => {
+            if (docs.length === 0) {
+                setProduct(
+                    {title:'', price:'', pictures:[{url:''}] }
+                )
+            } else {
+                setProduct(snapshot.docs[0].data())
+            }
+        })
     },[])
 
     return (

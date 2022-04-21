@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
+import {getFirestore, collection, getDocs, query, where} from '../../firebase/firebase'
 
 function ItemListContainer({title, buscar}) {
 
@@ -8,16 +9,17 @@ function ItemListContainer({title, buscar}) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('https://api.mercadolibre.com/sites/MLA/search?q=' + buscar)
-            .then(res => {
-                return res.json()
-            }).then((res) =>{
-                setProducts(res.results)
-            }).then(() => {
+        const db = getFirestore()
+
+        const q = query(collection(db, 'items'), where("categoryId", "==", buscar));
+        getDocs(q).then(docs => {
+            if (docs.length === 0) {
                 setLoading(false)
-                window.scrollTo(0, 0)
-            })
-    },[])
+            } else {
+                setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+            }
+        })
+    }, [])
 
     return <>
     {
