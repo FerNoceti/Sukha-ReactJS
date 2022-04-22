@@ -29,7 +29,7 @@ function Home() {
                     <p className='home__p'>Mejorá tu experiencia con Periféricos de gama alta</p>
                 </div>
             </Carousel>
-            <ItemListContainer title={'Nuestros Productos'} buscar={'gamer'}/>
+            <ItemListContainer title={'Nuestros Productos'} />
     </div>
   )
 }

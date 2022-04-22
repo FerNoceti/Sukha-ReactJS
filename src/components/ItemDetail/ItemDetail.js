@@ -6,9 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
 import CartContext from "../CartContext/CartContext"
 
-function ItemDetail({id, title, price, image}){
+function ItemDetail({id, title, price, image, stock}){
 
-    const stock = parseInt(Math.random() * 100 + 1)
     const [show, setShow] = useState(false)
 
     const {addItem} = useContext(CartContext)
@@ -42,7 +41,8 @@ function ItemDetail({id, title, price, image}){
                 <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/>{"Sin descricpcion"}</span>
                 <span className="itemDetail__stock">Stock: {stock}</span>
                 <div hidden={show} className="itemDetail__count"><ItemCount stock={stock} onAdd={onAdd}/></div>
-                <Link hidden={!show} className="itemdetail__button" to={"/cart"}>Terminar mi compra</Link>
+                <Link className="itemdetail__button" to="/">Volver al inicio</Link>
+                <Link hidden={!show} className="itemdetail__button" to={"/cart"}>Ir al carrito</Link>
             </div>
             <ToastContainer position="top-right"/>
         </div>

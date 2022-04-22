@@ -17,7 +17,11 @@ export function CartContextProvider({children}) {
         console.log(cart)
     }
 
-    const removeItem = (item) => { setCart(cart.filter(cartItem => cartItem.id !== item.id)) }
+    const removeItem = (id) => { setCart(cart.filter(
+        (el) =>{
+            return el.id != id
+        }
+    )) }
 
     const clear = () => { setCart([]) }
 
@@ -31,8 +35,16 @@ export function CartContextProvider({children}) {
         })
     }
 
+    const totalItems = () => {
+        let total = 0;
+        cart.forEach((i) => {
+            total += i.quantity
+        })
+        return total
+    }
+
     return (
-        <Context.Provider value={{ cart, addItem, removeItem, clear, isInCart}}>
+        <Context.Provider value={{ cart, addItem, removeItem, clear, isInCart, totalItems}}>
             {children}
         </Context.Provider>
     )

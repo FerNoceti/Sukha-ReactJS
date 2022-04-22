@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
-
+import { firestoreDb} from '../../services/firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 function ItemDetailContainer() {
 
@@ -11,20 +12,20 @@ function ItemDetailContainer() {
         {title:'', price:'', pictures:[{url:''}] }
     )
 
-    const request = 'https://api.mercadolibre.com/items/' + params.id
-
     useEffect(() => {
-        fetch(request)
-            .then(res => {
-                return res.json()
-            }).then((res) =>{
-                setProduct(res)
-            })
+
+        const docRef = doc(firestoreDb, 'items', params.id)
+
+        getDoc(docRef).then(querySnapshot => {
+            const product = {id: querySnapshot.id, ...querySnapshot.data()}
+            setProduct(product)
+        })
+
     },[])
 
     return (
         <div className='itemDetailContainer'>
-            <ItemDetail id={product.id} title={product.title} price={product.price} image={product.pictures[0].url}/>
+            <ItemDetail id={product.id} title={product.title} price={product.price} image={product.img} description={product.description} stock={product.stock}/>
         </div>
     )
 

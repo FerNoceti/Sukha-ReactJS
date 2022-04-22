@@ -6,15 +6,17 @@ import CartContext from '../CartContext/CartContext';
 
 function CartWidget() {
 
-  const {cart} = useContext(CartContext);
+  const {cart, totalItems} = useContext(CartContext);
 
-  return (
-    <div className='cartwidget'>
+  return <>
+  {
+  cart.length > 0 &&
+  <div className='cartwidget'>
         <BsCart4 className='cart__icon'/>
-        <span className='cart__number' id='cartNum'>{cart.length}</span>
-    </div>
-
-  )
+        <span className='cart__number' id='cartNum'>{totalItems()}</span>
+  </div>
+  }
+  </>
 }
 
 export default CartWidget
