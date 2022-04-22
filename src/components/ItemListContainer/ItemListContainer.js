@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firestoreDb } from '../../services/firebase';
 
-function ItemListContainer({title, buscar}) {
+function ItemListContainer({title, categoryId}) {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-
     useEffect(() => {
-        const collectionRef = collection(firestoreDb, 'items')
+        const collectionRef = categoryId
+        ? query(collection(firestoreDb, 'items'), where('categoryId', '==', categoryId))
+        : collection(firestoreDb, 'items')
 
         getDocs(collectionRef)
             .then(querySnapshot => {
@@ -21,10 +22,15 @@ function ItemListContainer({title, buscar}) {
                     }
                 }
                 )
-                setProducts(products)
-                setLoading(false)
+                products.length === 0 ? setProducts([{title:'No hay productos', price: 0}]) : setProducts(products)
             }
         )
+        .catch(error => {
+            console.log(error)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
 
     }, [])
 

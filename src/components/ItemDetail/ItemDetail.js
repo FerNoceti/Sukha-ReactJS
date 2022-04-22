@@ -6,9 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom'
 import CartContext from "../CartContext/CartContext"
 
-function ItemDetail({id, title, price, image}){
+function ItemDetail({id, title, price, image, stock}){
 
-    const stock = parseInt(Math.random() * 100 + 1)
     const [show, setShow] = useState(false)
 
     const {addItem} = useContext(CartContext)
