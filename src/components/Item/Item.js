@@ -6,7 +6,7 @@ function Item(props) {
   return (
     <div className='item'>
         <div className='item__container__img'>
-            <img className='item__image' src={props.img} alt="img item"/>
+            <img className='item__image' src={props.img} alt={props.title}/>
         </div>
         <div className='item__container__datos'>
             <span className='item__title'>{props.title}</span>
