@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import {getFirestore, collection, getDocs, query, where, limit} from 'firebase/firestore'
 
 function ItemDetailContainer() {
 
@@ -12,22 +11,7 @@ function ItemDetailContainer() {
     )
 
     useEffect(() => {
-        const db = getFirestore()
-
-        const q = query(
-            collection(db, 'items'),
-            where('id', '==', params.id),
-            limit(1)
-        );
-        getDocs(q).then(docs => {
-            if (docs.length === 0) {
-                setProduct(
-                    {title:'', price:'', pictures:[{url:''}] }
-                )
-            } else {
-                setProduct(docs[0].data())
-            }
-        })
+        
     },[])
 
     return (
