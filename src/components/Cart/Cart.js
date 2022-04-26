@@ -28,12 +28,17 @@ function Cart(){
         const collectionRef = collection(firestoreDb, 'orders')
         addDoc(collectionRef, objOrder)
                 .then((response) => {
+                    console.log('orden creada')
+                    console.log(objOrder)
                     console.log(response)
                 })
                 .catch((error) => {
                     console.log(error)
                 }
-            )
+                )
+                .finally(() => {
+                    clear()
+                })
     }
 
 
