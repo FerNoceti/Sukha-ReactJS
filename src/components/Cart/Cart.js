@@ -1,15 +1,28 @@
-import React from 'react'
-import { useContext } from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import CartContext from "../CartContext/CartContext"
 import CartItem from '../CartItem/CartItem'
 import { Link } from 'react-router-dom'
 import './Cart.css'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, getDocs } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase'
 
 function Cart(){
 
     const {cart, clear, totalItems, totalPrice} = useContext(CartContext)
+
+    const [orders, setOrders] = useState([])
+    useEffect(() => {
+        const ordesCollection = (collection(firestoreDb, 'orders'))
+        getDocs(ordesCollection).then(docs => {
+            if (docs.size > 0) {
+                setOrders(docs.docs)
+                console.log(orders)
+            }
+            else {
+                setOrders([])
+            }
+        })
+    }, [])
 
     const createOrder = () => {
 
