@@ -33,8 +33,7 @@
 }
 
 .item__img{
-    max-width: 100%;
-    min-width: 300px;
+    width: 100%;
 }
 
 .item__precio{

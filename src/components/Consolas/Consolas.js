@@ -8,7 +8,9 @@ function Consolas() {
         <span className='consolas__titulo'>Consolas de Video Juego</span>
         <img src='https://i.imgur.com/RIafc2a.png' alt="Consolas"/>
         <p className='consolas__p'>Encontrá las últimas consolas aquí</p>
-        <ItemListContainer title={'Consolas de Video Juego'} categoryId={'consolas'}/>
+        <div className='consolas__items'>
+          <ItemListContainer title={'Consolas de Video Juego'} categoryId={'consolas'}/>
+        </div>
     </div>
   )
 }

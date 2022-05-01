@@ -1,12 +1,11 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import {useState, useContext} from "react"
 import { ToastContainer, toast } from 'react-toastify';
-import { Link } from 'react-router-dom'
-import CartContext from "../CartContext/CartContext"
+import { Link } from 'react-router-dom';
+import CartContext from "../CartContext/CartContext";
 
-function ItemDetail({id, title, price, image, stock}){
+function ItemDetail({id, title, price, image, stock, description}){
 
     const [show, setShow] = useState(false)
 
@@ -26,9 +25,7 @@ function ItemDetail({id, title, price, image, stock}){
             type: 'succes',
             theme: "light"
             })
-
     }
-
 
     return(
         <div className="itemDetail">
@@ -38,7 +35,7 @@ function ItemDetail({id, title, price, image, stock}){
             <div className="itemDetail__container">
                 <span className="itemDetail__nombre">{title}</span>
                 <span className="itemDetail__precio">Precio: ${price}</span>
-                <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/>{"Sin descricpcion"}</span>
+                <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/><br/>{description !== null ? description : 'No hay descripción'}</span>
                 <span className="itemDetail__stock">Stock: {stock}</span>
                 <div hidden={show} className="itemDetail__count"><ItemCount stock={stock} onAdd={onAdd}/></div>
                 <Link className="itemdetail__button" to="/">Volver al inicio</Link>

@@ -7,14 +7,12 @@ export function CartContextProvider({children}) {
     const [cart, setCart] = useState([]);
 
     const addItem = (item, quantity) => {
-        console.log(isInCart(item))
         if (isInCart(item)) {
             updateItem(item, quantity)
         }
         else{
             setCart([...cart, {...item, quantity}])
         }
-        console.log(cart)
     }
 
     const removeItem = (id) => { setCart(cart.filter(

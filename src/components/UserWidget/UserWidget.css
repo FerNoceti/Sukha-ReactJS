@@ -1,13 +1,13 @@
-.user{
+.userwidget{
     display: flex;
     color: #0741ACff;
 }
 
-.user__icon{
+.userwidget__icon{
     font-size: 35px;
 }
 
-.user__text{
+.userwidget__text{
     position: relative;
     top: 10px;
     left: 10px;
