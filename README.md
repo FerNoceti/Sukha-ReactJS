@@ -1,7 +1,7 @@
 # Sukha Store
 
-[![Video de muestra](https://i.imgur.com/5Olo4Pc.png)](https://www.youtube.com/watch?v=AH0-G0jH2Xo "Sukha")
-### [Video demostración](https://www.youtube.com/watch?v=AH0-G0jH2Xo)
+[![Video de muestra](blob:https://imgur.com/1bf66cd7-67c2-4012-9f70-6beef7ef0eca)](https://www.youtube.com/watch?v=HlgbEvLDAmo "Sukha")
+### [Video demostración](https://www.youtube.com/watch?v=HlgbEvLDAmo)
 ## Que es Sukha Store?
 
 Sukha es una tienda online realizada para el proyecto final del curso de ReactJS dictado por coder house.
