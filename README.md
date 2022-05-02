@@ -8,10 +8,9 @@ Sukha es una tienda online realizada para el proyecto final del curso de ReactJS
 
 En este curso, que es el tercer nivel de la carrera de programación, aprenderás a programar por componentes, mediante Javascript, JS, ES6, y también conocerás las ventajas de la utilización del flujos de datos. Asimismo, aplicarás el manejo de rutas utilizando Firebase, y comprenderás la utilización del virtual DOM mediante los desarrollos de React JS. Al finalizar, podrás crear tus propias aplicaciones SPA, y estarás en condiciones de hacer cualquier desarrollo con uno de los frameworks más populares y avanzados del momento.
 
-## Que se utiliza en la página
+## Que se utiliza en la página?
 
-
-En la página podemos encontrar implementacions de:
+En la página podemos encontrar implementacion de:
 
 - JSX & transpiling
 - Componentes
@@ -24,7 +23,7 @@ En la página podemos encontrar implementacions de:
 
 ## Iniciar el proyecto
 
-Para iniciar el proyecto clona el repositorio, asegurate de tener [node instalado](https://nodejs.org/es/download/) y abre la terminal con **Ctrl + ñ** y corre el comando `npm install` instalarás las dependencias.
+Para iniciar el proyecto clona el repositorio, asegúrate de tener [node instalado](https://nodejs.org/es/download/) y abre la terminal con **Ctrl + ñ** y corre el comando `npm install` instalarás las dependencias.
 Procede a abrir en proyecto en tu editor de texto de confianza
 En este caso se usó firebase, deberás crear un proyecto de firebase, luego para conectar al servidor deberás ir a la configuración de tu proyecto, crear tu archivo .env y con el siguiente formato completar los datos obtenidos en [tu aplicación de firebase](https://firebase.google.com/docs/web/learn-more?authuser=2&hl=es#config-object)
 
@@ -64,4 +63,4 @@ Agrega los productos y simula una compra, para verificar que efectivamente la or
 ![Order 2](https://i.imgur.com/zNL1FMK.png)
 ![Order 3](https://i.imgur.com/jSRBKW0.png)
 ## Por último...
-Queria darte las gracias por leer hasta este punto y ante cualquier duda o consulta no dudes en comunicarte conmigo mediante mi [mail](mailto:fer.j.noceti@gmail.com) o por [discord](https://discord.gg/AqFjpjAfXq)
+Quería darte las gracias por leer hasta este punto y ante cualquier duda o consulta no dudes en comunicarte conmigo mediante mi [mail](mailto:fer.j.noceti@gmail.com) o por [discord](https://discord.gg/AqFjpjAfXq)
