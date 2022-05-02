@@ -1,6 +1,6 @@
 # Sukha Store
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/https://www.youtube.com/watch?v=AH0-G0jH2Xo/0.jpg)](https://www.youtube.com/watch?v=AH0-G0jH2Xo "Sukha")
+[![IMAGE ALT TEXT](https://i.imgur.com/5Olo4Pc.png)](https://www.youtube.com/watch?v=AH0-G0jH2Xo "Sukha")
 
 ## Que es Sukha Store?
 
