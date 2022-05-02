@@ -13,7 +13,7 @@ function UserWidget() {
 			<>{user !== null ?
 				<span className='userwidget__info'>Hola {user.name}!</span>
 				:
-				<span className='userwidget__text' id='userText'>Inicia tus datos</span>
+				<span className='userwidget__text' id='userText'>Ingresa tus datos</span>
 			}</>
 		</div>
 	)

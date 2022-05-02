@@ -14,7 +14,7 @@ function Navbar() {
 						<Link className='navbar__categoria' to={"/perifericos"}>Periféricos</Link>
 				</div>
 				<div className='navbar__container'>
-						<Link className='navbar__link' to={"/user"}><UserWidget/></Link>
+						<Link className='navbar__categoria' to={"/user"}><UserWidget/></Link>
 						<Link className='navbar__categoria' to={"/cart"}><CartWidget/></Link>
 				</div>
 		</div>

@@ -22,6 +22,7 @@ function Cart(){
         const objOrder = {
             buyer: user,
             cart: cart,
+            state: 'generated',
             totalPrice: totalPrice(),
             totalItems: totalItems(),
             date: new Date(),
@@ -29,9 +30,11 @@ function Cart(){
 
         const collectionRef = collection(firestoreDb, 'orders')
         addDoc(collectionRef, objOrder)
-                .then(() => {
+                .then((res) => {
                     setOrderState(true)
-                    Message({message: `Orden de compra confirmada.\nLimpiando carrito...`, theme: 'light'})
+                    Message({message: `Orden de compra confirmada con id; ${res.id}.`, theme: 'light'})
+                    Message({message: `Se ha enviado un correo de confirmación a ${user.mail}.`, theme: 'light'})
+                    Message({message: `Gracias por tu compra. Limpiando carrito...`, theme: 'light'})
                 })
                 .catch(() => {
                     Message({message: 'Error al crear orden', theme: 'warning'})
@@ -41,7 +44,7 @@ function Cart(){
                     setTimeout(() => {
                         clear()
                         scroll.scrollToTop({duration: 0})
-                    }, 5000)
+                    }, 10000)
                 })
     }
 
