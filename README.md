@@ -1,6 +1,6 @@
 # Sukha Store
 
-![image](https://github.com/FerNoceti/Sukha-ReactJS/blob/entrega-final/Sukha.gif?raw=true)
+![image](https://i.imgur.com/unVmhbQ.mp4)
 
 ## Que es Sukha Store?
 
