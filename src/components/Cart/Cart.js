@@ -91,8 +91,7 @@ function Cart(){
                     </button>
                     :
                     <div className='cart__info'>
-                        <span className='cart__text'>Crea un usario para confirmar tu pedido</span>
-                        <Link to='/user' className='cart__link'>Crear usuario</Link>
+                        <span className='cart__text'><Link to='/user' className='cart__link'>Crea un usuario</Link> para confirmar tu pedido</span>
                     </div>
             }
                 </>
