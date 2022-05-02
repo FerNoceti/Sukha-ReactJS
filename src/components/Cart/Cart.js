@@ -6,7 +6,8 @@ import './Cart.css'
 import { addDoc, collection } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase'
 import Confetti from 'react-confetti'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import Message from '../Message/Message'
 import UserContext from '../UserContext/UserContext'
 import { animateScroll as scroll} from 'react-scroll';
 
@@ -30,30 +31,10 @@ function Cart(){
         addDoc(collectionRef, objOrder)
                 .then(() => {
                     setOrderState(true)
-                    toast(`Orden de compra confirmada.\nLimpiando carrito...`, {
-                        position: "top-right",
-                        autoClose: 2500,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        type: 'succes',
-                        theme: "light"
-                        })
+                    Message({message: `Orden de compra confirmada.\nLimpiando carrito...`, theme: 'light'})
                 })
                 .catch(() => {
-                    toast(`Error al procesar la compra, intente de luego mas tarde`, {
-                        position: "top-right",
-                        autoClose: 2500,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        type: 'succes',
-                        theme: "light"
-                        })
+                    Message({message: 'Error al crear orden', theme: 'warning'})
                 }
                 )
                 .finally(() => {

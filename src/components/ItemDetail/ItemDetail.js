@@ -1,7 +1,8 @@
 import React, {useState, useContext} from "react";
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import Message from "../Message/Message";
 import { Link } from 'react-router-dom';
 import CartContext from "../CartContext/CartContext";
 
@@ -14,17 +15,7 @@ function ItemDetail({id, title, price, image, stock, description}){
     const onAdd = (cant) => {
         show ? setShow(false) : setShow(true)
         addItem({id, title, price, image}, cant)
-        toast(`se añadio al carrito: ${cant} unidad/es de: ${title}`, {
-            position: "top-center",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            type: 'succes',
-            theme: "light"
-            })
+        Message({message: `se añadio al carrito: ${cant} unidad/es de: ${title}`, theme: "light"})
     }
 
     return(

@@ -29,5 +29,6 @@ En la página podemos encontrar implementacions de:
 
 ## Iniciar el proyecto
 
-Para iniciar el proyecto clona el repositorio y con `npm install` instalaras las dependecias
+Para iniciar el proyecto clona el repositorio y con `npm install` instalaras las dependencias
+
 Luego para ejecutar usa el comando `npm start`

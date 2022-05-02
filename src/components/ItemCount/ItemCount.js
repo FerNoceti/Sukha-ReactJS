@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import Message from '../Message/Message';
 import 'react-toastify/dist/ReactToastify.css';
 import './ItemCount.css'
 
@@ -8,22 +9,10 @@ function ItemCount({ initial = 0, stock, onAdd}) {
 
     const [count, setCount] = useState(initial)
 
-    const increment = () => {count < stock ? setCount(count + 1) : notificar("No hay stock del producto", 'warning')}
-    const decrement = () => { count > 0 ? setCount(count - 1) : notificar("No puedes ingresar cantidades menores a 0", 'warning')}
+    const increment = () => {count < stock ? setCount(count + 1) :Message({message: "No hay stock del producto", theme: 'light'})}
+    const decrement = () => { count > 0 ? setCount(count - 1) : Message({message: "No puedes ingresar cantidades menores a 0", theme: 'light'})}
 
-    function notificar(texto, tipo){
-        toast(texto, {
-            position: "bottom-right",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            type: tipo,
-            theme: "dark"
-            })
-    }
+
 
 
     return (
