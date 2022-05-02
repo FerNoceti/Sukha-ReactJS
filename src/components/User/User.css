@@ -8,7 +8,7 @@
     font-weight: bold;
     color: #2657B4ff;
     gap: 10px 20px;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .user__title{
@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #2657B4ff;
     gap: 10px 20px;
@@ -90,4 +90,17 @@
     padding: 13px;
     width: 200px;
     text-decoration: none;
+}
+
+.user__container {
+    display:  flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
