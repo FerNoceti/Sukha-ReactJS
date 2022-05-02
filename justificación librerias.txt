@@ -1,0 +1,5 @@
+"react-confetti": https://www.npmjs.com/package/react-confetti a la hora de confirmar la compra le agrega un toque especial
+"react-icons": https://react-icons.github.io/react-icons/ para implementar el ícono del cart y del user
+"react-scroll": https://www.npmjs.com/package/react-scroll para scrollear al tope cada vez que se mueve de ventanas
+"react-toastify": https://www.npmjs.com/package/react-toastify dar mensajes durante el uso de la app
+"react-responsive-carousel": https://www.npmjs.com/package/react-responsive-carousel en el home muestra imágenes de las categorias a modo de carousel

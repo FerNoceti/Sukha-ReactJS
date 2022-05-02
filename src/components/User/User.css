@@ -8,11 +8,17 @@
     font-weight: bold;
     color: #2657B4ff;
     gap: 10px 20px;
-    min-height: 80vh;
+    width: 100%;
+    min-height: 85vh;
 }
 
 .user__title{
-    font-size: 2rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.user__subtitle {
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -92,15 +98,19 @@
     text-decoration: none;
 }
 
-.user__container {
-    display:  flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
 .user__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
+}
+
+.user__resgister {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+    gap : 10px;
+    justify-content: center;
+    align-items: center;
 }

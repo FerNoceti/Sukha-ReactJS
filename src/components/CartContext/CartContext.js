@@ -34,11 +34,9 @@ export function CartContextProvider({children}) {
     }
 
     const totalItems = () => {
-        let total = 0;
-        cart.forEach((i) => {
-            total += i.quantity
-        })
-        return total
+        return cart.reduce((acc, item) => {
+            return acc + item.quantity
+        }, 0)
     }
 
     const totalPrice = () => {

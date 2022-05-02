@@ -10,7 +10,7 @@ import { animateScroll as scroll} from 'react-scroll';
 function ItemDetailContainer() {
 
     const params = useParams()
-    const [product, setProduct] = useState({title: 'Cargando...', price: 0, image: 'Cargando...', stock: 0})
+    const [product, setProduct] = useState({title: 'Cargando...', price: 0, image: 'Cargando...', stock: 0, description: 'Cargando...'})
 
     const {cart} = useContext(CartContext)
 
@@ -25,7 +25,13 @@ function ItemDetailContainer() {
         getDoc(docRef).then(querySnapshot => {
             const product = {id: querySnapshot.id, ...querySnapshot.data()}
             product.stock -= cartStock
-            setProduct(product)
+            if (product.title === undefined){
+                setProduct({title: 'Producto no encontrado', price: 0, image: 'Producto no encontrado', stock: 0, description: 'Producto no encontrado'})
+            }
+            else{
+                setProduct(product)
+            }
+
         })
 
     },[])

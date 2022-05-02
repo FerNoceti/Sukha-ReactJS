@@ -22,6 +22,7 @@ function Cart(){
         const objOrder = {
             buyer: user,
             cart: cart,
+            state: 'generated',
             totalPrice: totalPrice(),
             totalItems: totalItems(),
             date: new Date(),
@@ -32,7 +33,7 @@ function Cart(){
                 .then((res) => {
                     setOrderState(true)
                     Message({message: `Orden de compra confirmada con id; ${res.id}.`, theme: 'light'})
-                    Message({message: `Se ha enviado un correo de confirmación a ${user.email}.`, theme: 'light'})
+                    Message({message: `Se ha enviado un correo de confirmación a ${user.mail}.`, theme: 'light'})
                     Message({message: `Gracias por tu compra. Limpiando carrito...`, theme: 'light'})
                 })
                 .catch(() => {
