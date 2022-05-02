@@ -1,6 +1,6 @@
 # Sukha Store
 
-[![Video de muestra](blob:https://imgur.com/1bf66cd7-67c2-4012-9f70-6beef7ef0eca)](https://www.youtube.com/watch?v=HlgbEvLDAmo "Sukha")
+[![Video de muestra](https://i.imgur.com/9nXKhye.png)](https://www.youtube.com/watch?v=HlgbEvLDAmo "Sukha")
 ### [Video demostración](https://www.youtube.com/watch?v=HlgbEvLDAmo)
 ## Que es Sukha Store?
 
