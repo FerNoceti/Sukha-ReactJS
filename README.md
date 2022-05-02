@@ -1,7 +1,7 @@
 # Sukha Store
 
-[![IMAGE ALT TEXT](https://i.imgur.com/5Olo4Pc.png)](https://www.youtube.com/watch?v=AH0-G0jH2Xo "Sukha")
-
+[![Video de muestra](https://i.imgur.com/5Olo4Pc.png)](https://www.youtube.com/watch?v=AH0-G0jH2Xo "Sukha")
+### [Video demostración](https://www.youtube.com/watch?v=AH0-G0jH2Xo)
 ## Que es Sukha Store?
 
 Sukha es una tienda online realizada para el proyecto final del curso de ReactJS dictado por coder house.
@@ -35,7 +35,7 @@ En este caso se usó firebase, deberás crear un proyecto de firebase, luego par
     REACT_APP_storageBucket=...
     REACT_APP_messagingSenderId...
     REACT_APP_appId=...
-
+![env](https://i.imgur.com/nXxbuL1.png)
 Completando con tus credenciales de firebase.
 Dentro de tu aplicación de firebase dirígete a Firestore Database y crea una colección llamada 'items'.
 
@@ -52,12 +52,16 @@ Dentro de tu aplicación de firebase dirígete a Firestore Database y crea una c
     stock: 122
     
     title: "Nintendo Switch"
+![item](https://i.imgur.com/WLT8AcH.png)
    
 ## Probando la página
 
 Una vez configurado todo usa el comando `npm start`  para correr la página de forma local, generalmente se ejecuta en [localhost](http://localhost:3000/).
 Puedes hacer la prueba y ver las distintas funcionabilidades que la página ofrece.
-Agrega los productos y simula una compra, para verificar que efectivamente la orden se hizo ve a tu almacenamiento de firestore y observaras que se generó la colección ordes.
+Agrega los productos y simula una compra, para verificar que efectivamente la orden se hizo ve a tu almacenamiento de firestore y observaras que se generó la colección ordes, en este caso adjunto la imagen de la orden creada en el [video](https://www.youtube.com/watch?v=AH0-G0jH2Xo)
 
+![Orden 1](https://i.imgur.com/u7YZSti.png)
+![Order 2](https://i.imgur.com/zNL1FMK.png)
+![Order 3](https://i.imgur.com/jSRBKW0.png)
 ## Por último...
 Queria darte las gracias por leer hasta este punto y ante cualquier duda o consulta no dudes en comunicarte conmigo mediante mi [mail](mailto:fer.j.noceti@gmail.com) o por [discord](https://discord.gg/AqFjpjAfXq)
