@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import {useState, useContext} from "react"
-import { ToastContainer, toast } from 'react-toastify';
-import { Link } from 'react-router-dom'
-import CartContext from "../CartContext/CartContext"
+import { ToastContainer } from 'react-toastify';
+import Message from "../Message/Message";
+import { Link } from 'react-router-dom';
+import CartContext from "../CartContext/CartContext";
 
 function ItemDetail({id, title, price, image, stock, description}){
 
@@ -15,20 +15,8 @@ function ItemDetail({id, title, price, image, stock, description}){
     const onAdd = (cant) => {
         show ? setShow(false) : setShow(true)
         addItem({id, title, price, image}, cant)
-        toast(`se añadio al carrito: ${cant} unidad/es de: ${title}`, {
-            position: "top-center",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            type: 'succes',
-            theme: "light"
-            })
-
+        Message({message: `se añadio al carrito: ${cant} unidad/es de: ${title}`, theme: "light"})
     }
-
 
     return(
         <div className="itemDetail">
@@ -38,7 +26,7 @@ function ItemDetail({id, title, price, image, stock, description}){
             <div className="itemDetail__container">
                 <span className="itemDetail__nombre">{title}</span>
                 <span className="itemDetail__precio">Precio: ${price}</span>
-                <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/>{description}</span>
+                <span className="itemDetail__descripcion">Lo que tenés que saber de este producto: <br/><br/>{description !== null ? description : 'No hay descripción'}</span>
                 <span className="itemDetail__stock">Stock: {stock}</span>
                 <div hidden={show} className="itemDetail__count"><ItemCount stock={stock} onAdd={onAdd}/></div>
                 <Link className="itemdetail__button" to="/">Volver al inicio</Link>

@@ -23,3 +23,14 @@
 .consolas img{
     width: 30%;
 }
+
+.consolas__items{
+    width: 100%;
+}
+
+.consolas__items img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    object-fit: cover;
+}

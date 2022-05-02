@@ -23,3 +23,14 @@
 .perifericos img{
     width: 40%;
 }
+
+.perifericos__items{
+    width: 100%;
+}
+
+.perifericos__items img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    object-fit: cover;
+}

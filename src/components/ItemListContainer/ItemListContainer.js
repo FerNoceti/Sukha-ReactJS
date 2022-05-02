@@ -3,12 +3,14 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firestoreDb } from '../../services/firebase';
+import { animateScroll as scroll} from 'react-scroll';
 
 function ItemListContainer({title, categoryId}) {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
+        scroll.scrollToTop({duration: 0})
         const collectionRef = categoryId
         ? query(collection(firestoreDb, 'items'), where('categoryId', '==', categoryId))
         : collection(firestoreDb, 'items')
@@ -37,7 +39,12 @@ function ItemListContainer({title, categoryId}) {
     return <>
     {
         loading ?
-            <div className='cargando'>Cargando...</div>
+            <div className='cargando'>
+                <div className="spinner-container">
+                    <div className="loading-spinner">
+                    </div>
+                </div>
+            </div>
             :
             <div className='itemListContainer'>
                 <span className='itemListContainer__titulo'>{title}</span>
